@@ -364,6 +364,13 @@ section p {
     padding: 5px;
 }
 
+/* temp line */
+#coming-soon {
+    font-style: italic;
+    font-size: smaller;
+    color: #00aced;
+}
+
 footer {
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
