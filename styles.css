@@ -123,6 +123,11 @@ h2 {
     background: url('assets/images/home-background.jpg') center/cover no-repeat;
 }
 
+#kitsugi-intro {
+    font-weight: 600;
+    color: #00aced;
+}
+
 nav ul {
     list-style: none;
     display: flex;
