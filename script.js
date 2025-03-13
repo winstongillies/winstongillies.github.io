@@ -1,4 +1,4 @@
-//Portfolio Image Expansion//
+//portfolio image expansion//
 document.addEventListener("DOMContentLoaded", function () {
     const images = document.querySelectorAll(".gallery img");
     const fullscreenContainer = document.createElement("div");
@@ -32,9 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Intro Text Effects
+// intro text effects
 const dynamicText = document.querySelector("#typewriter span");
-const words = ["graphic designer", "developer", "tech support", "coffee drinker"];
+const words = ["picture doctor", "website maker", "tech support", "coffee drinker"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -47,16 +47,21 @@ const typeEffect = () => {
 
     if (!isDeleting && charIndex < currentWord.length) {
         charIndex++;
-        setTimeout(typeEffect, 100); // Faster typing
+        setTimeout(typeEffect, 100);
     } else if (isDeleting && charIndex > 0) {
         charIndex--;
-        setTimeout(typeEffect, 50); // Faster deleting
+        setTimeout(typeEffect, 50);
     } else {
         isDeleting = !isDeleting;
         dynamicText.classList.remove("stop-blinking");
         wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
-        setTimeout(typeEffect, 700); // Shorter pause before switching words
+        setTimeout(typeEffect, 700);
     }
 };
 
 typeEffect();
+
+/* mobile responsiveness */
+document.querySelector('.hamburger').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
